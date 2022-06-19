@@ -5,13 +5,13 @@ const eh = require('../helpers/executionHelper');
 
 
 // Time: O(n) where n is the length of the string
-// Space: O(1) as it will only ever store up to 256 characters
+// Space: O(1) as it will only ever store up to 128 characters
 
 // If additional data structures cannot be used then a comparison between every
 // character must be made leading to a time complexity of O(n^2)
 const isUnique = (string) => {
   // The character space of ASCII
-  if(string.length > 256) return false;
+  if(string.length > 128) return false;
 
   const map = new Map();
 
